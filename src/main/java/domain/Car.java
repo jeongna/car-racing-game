@@ -1,5 +1,13 @@
 package domain;
 
+import java.util.Random;
+
+/* 
+ * ÀÌ¸§ ¹ÝÈ¯
+ * À§Ä¡ ¹ÝÈ¯
+ * 0~9 ·£´ý °ªÀ¸·Î ÀüÁø¿©ºÎ
+ * */
+
 public class Car {
     private final String name;
     private int position = 0;
@@ -7,6 +15,39 @@ public class Car {
     public Car(String name) {
         this.name = name;
     }
+    
+    public String getName() {
+    	return this.name;
+    }
+    
+    public int getPosition() {
+    	return this.position;
+    }
+    
+    private int getRandomNum() {
+    	Random random = new Random();
+    	return random.nextInt(10);
+    }
+    
+    private void statusMove() {
+    	System.out.print(this.name);
+    	System.out.print(" : ");
+    	for(int i=0; i< this.position; i++) {
+    		System.out.print("-");
+    	}
+    	System.out.println();
+    }
+    
+    private void moveCheck(int move) {
+    	if(move>=4) {
+    		this.position ++;
+    	}
+    }
+    
+    public void race() {
+    	moveCheck(getRandomNum());
+    	statusMove();
+    }
 
-    // ì¶”ê°€ ê¸°ëŠ¥ êµ¬í˜„
+
 }
