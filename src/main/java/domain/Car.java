@@ -42,6 +42,7 @@ public class Car {
     public void race() {
     	moveCheck(getRandomNum());
     	statusMove();
+    	
     }
 
 
