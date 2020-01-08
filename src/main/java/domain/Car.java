@@ -2,11 +2,6 @@ package domain;
 
 import java.util.Random;
 
-/* 
- * 이름 반환
- * 위치 반환
- * 0~9 랜덤 값으로 전진여부
- * */
 
 public class Car {
     private final String name;
